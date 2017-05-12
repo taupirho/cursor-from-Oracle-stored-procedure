@@ -6,7 +6,7 @@ begin
    demo.demo_proc(democur);
    loop
       fetch democur into demorec;
-      exit when testcur%NOTFOUND;
+      exit when democur%NOTFOUND;
       dbms_output.put_line(demorec.name);
    end loop;
    close democur;
